@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-md-3"> </div>
             <div class="col-md-6">
-                <form action="#" method="post">
+                <form action="{{ url('city_detail') }}" method="post">
                 <select class="custom-select custom-select-md select2" name="id">
                     <option selected disabled>Select a city ...</option>
                     {% for datas in data %}

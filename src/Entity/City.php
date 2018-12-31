@@ -14,22 +14,22 @@ class City
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    public $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    public $name;
 
     /**
      * @ORM\Column(type="decimal", precision=6, scale=3)
      */
-    private $latitude;
+    public $latitude;
 
     /**
      * @ORM\Column(type="decimal", precision=6, scale=3)
      */
-    private $longitude;
+    public $longitude;
 
     public function getId(): ?int
     {
