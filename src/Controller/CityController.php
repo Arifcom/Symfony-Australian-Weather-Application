@@ -5,6 +5,9 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Entity\City;
+
+
 class CityController extends AbstractController
 {
     /**
@@ -12,9 +15,8 @@ class CityController extends AbstractController
      */
     public function index()
     {
-        return $this->render('city/home.html.twig', [
-            'controller_name' => 'CityController',
-        ]);
+        $data = $this->getDoctrine()->getRepository(City::class)->findAll();
+        return $this->render('city/home.html.twig', ['data' => $data]);
     }
     
     /**
